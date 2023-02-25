@@ -1,7 +1,7 @@
 from flask import Flask, request
 # from flask_react import React
 from flask_cors import CORS
-from Util import *
+# from source.Utils import *
 
 app = Flask(__name__)
 CORS(app)
@@ -26,13 +26,15 @@ def Defaultget():
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
-    print("/upload is called")
-    if 'file' not in request.files:
-        return 'No file uploaded', 400
-
-    file = request.files['file']
-    # file.save('uploads/' + file.filename)
+    # file = request.files['file']
+    # corn = request.form.get('corn')
+    # soybean = request.form.get('soybean')
+    file = request.files.get('file')
+    corn = request.json.get('corn')
+    soybean = request.json.get('soybean')
     print(file)
+    print(corn)
+    print(soybean)
     # predict(file)
 
     return 'File saved', 200
