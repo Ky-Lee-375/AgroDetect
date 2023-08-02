@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import "./App.css";
 
-import { Box, Grid, Stack } from "@mui/material";
+import { Grid } from "@mui/material";
 import FilePicker from "./components/FilePicker";
 
 function App() {
@@ -68,24 +68,6 @@ function App() {
   //     })
   //     .then((response) => setSelectedFile(response));
   // }, []);
-
-  // const fileSelectedHandler = (event) => {
-  //   setSelectedFile(event.target.files[0]);
-  // };
-
-  // const handleCheckboxChange = (event) => {
-  //   const { name, checked } = event.target;
-  //   if (name === "corn" && checked) {
-  //     setCorn(true);
-  //     setSoybean(false);
-  //   } else if (name === "soybean" && checked) {
-  //     setCorn(false);
-  //     setSoybean(true);
-  //   } else {
-  //     setCorn(false);
-  //     setSoybean(false);
-  //   }
-  // };
 
   // const fileUploadHandler = () => {
   //   const formData = new FormData();
